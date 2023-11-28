@@ -107,7 +107,7 @@ with center_column:
           </div>
       </div><div style='text-align: right;'>
           <div>
-          <span class="small hidden" style="padding: 0px 20px"> i</span>
+          <span class="small hidden" style="padding: 0px 20px 0px 0px"> i</span>
           <span class="small hidden">l</span>
           <span class="small hidden">o</span>
           <span class="small hidden">t</span>
