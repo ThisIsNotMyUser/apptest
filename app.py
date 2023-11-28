@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Set the page config to widen the app, and set a title and icon
-st.set_page_config(page_title='GenAI Tool', layout='centered')
+st.set_page_config(page_title='SCoP', layout='centered')
 
 # Define the custom HTML and CSS to use
 html_string = """
@@ -11,67 +11,46 @@ html_string = """
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #414141ff; /* Dark background */
-            color: white; /* White text color */
+            color: #ffffff; /* White text color */
         }
 
         .logo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 4em; /* 2 times larger */
+            font-size: 2em;
             text-transform: uppercase;
-            color: white; /* White text color for the logo */
-            cursor: pointer;
+            color: #ffffff;
         }
 
-        .logo span {
-            display: inline-block;
+        .logo span.large {
+            font-size: 1.5em; /* Larger size */
+            font-weight: 700;
         }
 
-        .logo span:hover {
-            animation: distort 0.5s ease-in-out infinite;
+        .logo span.small {
+            font-size: 1em; /* Smaller size */
         }
 
-        @keyframes distort {
-            0% {
-                transform: skewX(0deg) skewY(0deg);
-            }
-            25% {
-                transform: skewX(10deg) skewY(10deg);
-            }
-            50% {
-                transform: skewX(-10deg) skewY(-10deg);
-            }
-            75% {
-                transform: skewX(5deg) skewY(5deg);
-            }
-            100% {
-                transform: skewX(0deg) skewY(0deg);
-            }
-        }
-
-        /* Change Streamlit components to the dark theme */
-        .stTextInput .st-bb, .stTextInput .st-eb, .stTextInput .css-1cpxqw2 {
-            background-color: #414141ff;
-            color: white;
-            border-color: white;
-        }
-
-        /* This targets all Streamlit text */
-        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
+        .stTextInput input {
             font-family: 'Montserrat', sans-serif;
-            color: white;
-        }
-
-        /* Override default Streamlit styling for other elements */
-        .st-bv, .st-bw, .st-bx, .stButton>button {
             background-color: #414141ff;
             color: white;
             border-color: white;
         }
+
+        .stTextInput>div>div>input {
+            border-color: white;
+        }
+        .css-1cpxqw2 {
+            border-color: white;
+        }
+        /* Add other Streamlit components you wish to style */
     </style>
 
     <div class="logo">
-        <span>G</span><span>e</span><span>n</span><span>A</span><span>I</span>
-        <span>T</span><span>o</span><span>o</span><span>l</span>
+        <span class="large">S</span>
+        <span class="large">C</span>
+        <span class="small">O</span>
+        <span class="large">P</span>
     </div>
 """
 
@@ -96,13 +75,12 @@ st.markdown(
         .css-1cpxqw2 {
             border-color: white;
         }
-        /* Add other Streamlit components you wish to style */
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Text input box at the bottom with placeholder
+# Text input box with placeholder
 user_input = st.text_input("", placeholder="Ask SCoP", key="prompt_input")
 
 # Display something once the user enters a prompt
