@@ -140,13 +140,13 @@ with center_column:
                 border-color: white;
             }
             /* Add other Streamlit components you wish to style */
-
-            
-            input::placeholder {
+            .stPlaceholder {
                 font-weight: bold;
                 opacity: 0.5;
                 color: red;
             }
+            
+
 
         </style>
         """,
