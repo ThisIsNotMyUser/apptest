@@ -96,7 +96,7 @@ with center_column:
     
     
     <div class="logo" style="display:flex;">
-      <div style='text-align: left;'>
+      <div style='text-align: left;width="50%"'>
           <div>
           <span class="large">S</span>
           <span class="large">C</span>
