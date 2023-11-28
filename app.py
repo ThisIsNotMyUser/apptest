@@ -16,6 +16,3 @@ if user_input:
     # Display the output in a container at the top of the page
     with st.container():
         st.write(f'You entered: {user_input}')
-
-    # Clear the input box after displaying the output
-    st.session_state.input = ""
