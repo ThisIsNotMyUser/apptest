@@ -96,6 +96,7 @@ with center_column:
     
     
     <div class="logo">
+      <div>
       <span class="large">S</span>
       <span class="large">C</span>
       <span class="small">O</span>
@@ -104,6 +105,9 @@ with center_column:
       <span class="small hidden">l</span>
       <span class="small hidden">o</span>
       <span class="small hidden">t</span>
+      </div><div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg">
+      </div>
     </div>
     
     
