@@ -143,7 +143,7 @@ with center_column:
             input::placeholder {
                 font-weight: bold;
                 opacity: 1;
-                color: #FFFFFF;
+                color: white !important;
             }
             
 
