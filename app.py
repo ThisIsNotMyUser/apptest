@@ -102,7 +102,7 @@ with center_column:
           <span class="large">C</span>
           <span class="small">O</span>
           <span class="large">P</span>
-          </div><div style='text-align: right;padding: 0px'>
+          </div><div style='text-align: right;padding: 0px position: relative; top: -30px;' >
               <span style='font-size: 0.5em;'><b>BY</b></span><img style='width: 100px;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
           </div>
       </div><div style='text-align: right;'>
