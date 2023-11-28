@@ -132,6 +132,7 @@ with center_column:
             .stTextInput input {
                 color: white;
             }
+            
             .stTextInput>div>div>input {
                 border-color: white;
             }
@@ -139,6 +140,14 @@ with center_column:
                 border-color: white;
             }
             /* Add other Streamlit components you wish to style */
+
+            
+            input::placeholder {
+                font-weight: bold;
+                opacity: 0.5;
+                color: red;
+            }
+
         </style>
         """,
         unsafe_allow_html=True
