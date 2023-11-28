@@ -142,7 +142,7 @@ with center_column:
             /* Add other Streamlit components you wish to style */
             input::placeholder {
                 opacity: 1;
-                color: !important #FFFFFF;
+                color: #FFFFFF !important;
             }
             
 
