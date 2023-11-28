@@ -141,7 +141,6 @@ with center_column:
             }
             /* Add other Streamlit components you wish to style */
             input::placeholder {
-                font-weight: bold;
                 opacity: 1;
                 color: !important #FFFFFF;
             }
