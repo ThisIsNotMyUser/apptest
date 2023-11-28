@@ -97,7 +97,7 @@ with center_column:
     
     <div class="logo">
       <div>
-      <span class="large">T</span>
+      <span class="large">S</span>
       <span class="large">C</span>
       <span class="small">O</span>
       <span class="large">P</span>
