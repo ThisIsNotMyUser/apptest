@@ -121,7 +121,7 @@ with center_column:
         """
         <style>
             body {
-                background-image: url("https://drive.google.com/file/d/1U8fZSvR-8pvsSs4AtiknBkZAu0SSVzeR/download")
+                background-image: url('https://drive.google.com/file/d/1U8fZSvR-8pvsSs4AtiknBkZAu0SSVzeR/download')
                 font-family: 'Montserrat', sans-serif;
                 background-color: #414141ff;
                 color: white;
