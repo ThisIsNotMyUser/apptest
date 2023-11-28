@@ -106,11 +106,12 @@ with center_column:
               <img style='width: 100px;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
           </div>
       </div><div style='text-align: right;'>
+          <div>
           <span class="small hidden">i</span>
           <span class="small hidden">l</span>
           <span class="small hidden">o</span>
           <span class="small hidden">t</span>
-      </div><div style='text-align: right;opacity: 0;'>
+          </div><div style='text-align: right;'>
               <img style='width: 100px;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
           </div>
     </div>
