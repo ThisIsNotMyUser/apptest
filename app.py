@@ -103,7 +103,7 @@ with center_column:
           <span class="small">O</span>
           <span class="large">P</span>
           </div><div style='text-align: right;'>
-              <img style='width: 100px;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
+              <span style='font-size: 0.5em;'><b>BY</b></span><img style='width: 100px;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
           </div>
       </div><div style='text-align: right;'>
           <div>
@@ -113,7 +113,7 @@ with center_column:
           <span class="small hidden">t</span>
           <span class="large" style='opacity:0;'>A</span>
           </div><div style='text-align: right;'>
-              <span style='font-size: 0.8em;'>BY<img style='width: 100px; opacity: 0;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
+              <img style='width: 100px; opacity: 0;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
           </div>
     </div>
     
