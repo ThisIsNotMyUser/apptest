@@ -102,11 +102,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Instructions
-st.write("Enter your prompt in the text box below and hit enter to see the magic.")
-
-# Text input box at the bottom
-user_input = st.text_input("Prompt", key="prompt_input", on_change=None)
+# Text input box at the bottom with placeholder
+user_input = st.text_input("", placeholder="Ask SCoP", key="prompt_input")
 
 # Display something once the user enters a prompt
 if user_input:
