@@ -2,7 +2,7 @@ import streamlit as st
 
 # Set the page config to widen the app, and set a title and icon
 st.set_page_config(page_title='SCoP', layout='centered')
-left_column, center_column, right_column = st.columns([1, 15, 1])
+left_column, center_column, right_column = st.columns([1, 50, 1])
 
 # Use the center column for your content
 with center_column:
