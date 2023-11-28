@@ -106,7 +106,7 @@ with center_column:
       <span class="small hidden">o</span>
       <span class="small hidden">t</span>
       </div><div style='text-align: left'>
-      <img style='width: 300px; '; src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
+      <img  src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
       </div>
     </div>
     
