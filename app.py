@@ -47,7 +47,7 @@ html_string = """
         }
 
         /* This ensures that all text uses the Montserrat font */
-        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
+        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm, .stButton>button {
             font-family: 'Montserrat', sans-serif;
         }
     </style>
@@ -74,19 +74,20 @@ st.markdown(
 )
 
 # Instructions
-st.write("Enter your prompt in the text box below and hit enter to see the magic.")
+st.write("Enter your prompt in the text box below and press the arrow button to see the magic.")
 
-# Text input box at the bottom
+# Text input box with a submit button
 user_input = st.text_input("Prompt", key="prompt_input")
+submit_button = st.button("🔼")
 
 # You can now use the user_input variable to pass to your genAI tool
 # For example:
-# if user_input:
+# if submit_button:
 #    response = your_genai_function(user_input)
 #    st.write(response)
 
-# Display something once the user enters a prompt
-if user_input:
+# Display something once the user enters a prompt and clicks the submit button
+if submit_button:
     st.write("You entered: ", user_input)
 
 # The rest of your genAI tool logic will go here
