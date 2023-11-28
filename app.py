@@ -1,90 +1,112 @@
-# app.py
 import streamlit as st
 
-# Define the HTML and CSS
-html_content = '''
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #414141ff;
-    }
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2em;
-      text-transform: uppercase;
-      position: relative;
-      color: #ffffff;
-    }
-    .logo span {
-      display: inline-block;
-      transition: transform 0.3s ease-in-out;
-    }
-    .logo span.large {
-      font-size: 1.5em;
-      font-weight: 700;
-    }
-    .logo span.small {
-      font-size: 1em;
-    }
-    .logo span.hidden {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
-    .logo:hover .small {
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-    }
-    .magnifyspan {
-      animation: magnify 0.5s ease-in-out infinite;
-    }
-    .logo span.animated {
-      animation: moveMagnify 5s linear alternate;
-    }
-    .logo span:hover {
-      transform: scale(1.2);
-    }    
-    @keyframes magnify {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
-</head>
-<body>
+# Set the page config to widen the app, and set a title and icon
+st.set_page_config(page_title='GenAI Tool', layout='centered')
 
-<div class="logo">
-  <span class="large">S</span>
-  <span class="large">C</span>
-  <span class="small">O</span>
-  <span class="large">P</span>
-  <span class="small hidden">i</span>
-  <span class="small hidden">l</span>
-  <span class="small hidden">o</span>
-  <span class="small hidden">t</span>
-</div>
+# Define the custom HTML and CSS to use
+html_string = """
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-</body>
-</html>
-'''
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #414141ff; /* Dark background */
+            color: white; /* White text color */
+        }
 
-# Using st.markdown to render HTML content
-st.markdown(html_content, unsafe_allow_html=True)
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4em; /* 2 times larger */
+            text-transform: uppercase;
+            color: white; /* White text color for the logo */
+            cursor: pointer;
+        }
 
-# Continue with the rest of your Streamlit content
-# ...
+        .logo span {
+            display: inline-block;
+        }
 
+        .logo span:hover {
+            animation: distort 0.5s ease-in-out infinite;
+        }
+
+        @keyframes distort {
+            0% {
+                transform: skewX(0deg) skewY(0deg);
+            }
+            25% {
+                transform: skewX(10deg) skewY(10deg);
+            }
+            50% {
+                transform: skewX(-10deg) skewY(-10deg);
+            }
+            75% {
+                transform: skewX(5deg) skewY(5deg);
+            }
+            100% {
+                transform: skewX(0deg) skewY(0deg);
+            }
+        }
+
+        /* Change Streamlit components to the dark theme */
+        .stTextInput .st-bb, .stTextInput .st-eb, .stTextInput .css-1cpxqw2 {
+            background-color: #414141ff;
+            color: white;
+            border-color: white;
+        }
+
+        /* This targets all Streamlit text */
+        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        /* Override default Streamlit styling for other elements */
+        .st-bv, .st-bw, .st-bx, .stButton>button {
+            background-color: #414141ff;
+            color: white;
+            border-color: white;
+        }
+    </style>
+
+    <div class="logo">
+        <span>G</span><span>e</span><span>n</span><span>A</span><span>I</span>
+        <span>T</span><span>o</span><span>o</span><span>l</span>
+    </div>
+"""
+
+# Use the HTML string with markdown to create the logo with the hover effect
+st.markdown(html_string, unsafe_allow_html=True)
+
+# Inject the Montserrat font into the Streamlit app
+st.markdown(
+    """
+    <style>
+        html, body, [class*="st-"], .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #414141ff;
+            color: white;
+        }
+        .stTextInput input {
+            color: white;
+        }
+        .stTextInput>div>div>input {
+            border-color: white;
+        }
+        .css-1cpxqw2 {
+            border-color: white;
+        }
+        /* Add other Streamlit components you wish to style */
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Text input box at the bottom with placeholder
+user_input = st.text_input("", placeholder="Ask SCoP", key="prompt_input")
+
+# Display something once the user enters a prompt
+if user_input:
+    st.write("You entered: ", user_input)
+
+# The rest of your genAI tool logic will go here
