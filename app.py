@@ -6,9 +6,15 @@ st.set_page_config(page_title='GenAI Tool', layout='centered')
 # Define the custom HTML and CSS to use
 html_string = """
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
         .logo {
-            font-family: 'Arial', sans-serif;
-            font-size: 2em;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4em; /* 2 times larger */
             text-transform: uppercase;
             color: #3498db;
             cursor: pointer;
@@ -39,15 +45,33 @@ html_string = """
                 transform: skewX(0deg) skewY(0deg);
             }
         }
+
+        /* This ensures that all text uses the Montserrat font */
+        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
+            font-family: 'Montserrat', sans-serif;
+        }
     </style>
 
     <div class="logo">
-        <span>S</span><span>C</span><span>O</span><span>P</span><span>I</span><span>L</span><span>O</span><span>T</span>
+        <span>G</span><span>e</span><span>n</span><span>A</span><span>I</span>
+        <span>T</span><span>o</span><span>o</span><span>l</span>
     </div>
 """
 
 # Use the HTML string with markdown to create the logo with the hover effect
 st.markdown(html_string, unsafe_allow_html=True)
+
+# Inject the Montserrat font into the Streamlit app
+st.markdown(
+    """
+    <style>
+        html, body, [class*="st-"] {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Instructions
 st.write("Enter your prompt in the text box below and hit enter to see the magic.")
