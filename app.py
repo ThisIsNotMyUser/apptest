@@ -17,39 +17,63 @@ html_string = """
       background-color: #414141ff;
     }
 
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4em; /* 2 times larger */
-            text-transform: uppercase;
-            color: white; /* White text color for the logo */
-            cursor: pointer;
-        }
+ 
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2em;
+      text-transform: uppercase;
+      position: relative;
+      color: #ffffff;
+    }
 
-        .logo span {
-            display: inline-block;
-        }
+    .logo span {
+      display: inline-block;
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .logo span:hover {
-            animation: distort 0.5s ease-in-out infinite;
-        }
+    .logo span.large {
+      font-size: 1.5em; /* Adjust the size as needed */
+      font-weight: 700;
+    }
 
-        @keyframes distort {
-            0% {
-                transform: skewX(0deg) skewY(0deg);
-            }
-            25% {
-                transform: skewX(10deg) skewY(10deg);
-            }
-            50% {
-                transform: skewX(-10deg) skewY(-10deg);
-            }
-            75% {
-                transform: skewX(5deg) skewY(5deg);
-            }
-            100% {
-                transform: skewX(0deg) skewY(0deg);
-            }
-        }
+    .logo span.small {
+      font-size: 1em; /* Adjust the size as needed */
+    }
+
+    .logo span.hidden {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; /* Adjust the duration as needed */
+    }
+
+
+    .logo:hover .small {
+      opacity: 1;
+      transition: opacity 1s ease-in-out; /* Adjust the duration as needed */
+    }
+
+    .magnifyspan {
+      animation: magnify 0.5s ease-in-out infinite;
+    }
+
+    .logo span.animated {
+      animation: moveMagnify 5s linear alternate;
+    }
+    
+    .logo span:hover {
+      transform: scale(1.2); /* Magnifying effect on hover */
+    }    
+
+    @keyframes magnify {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
         /* Change Streamlit components to the dark theme */
         .stTextInput .st-bb, .stTextInput .st-eb, .stTextInput .css-1cpxqw2 {
