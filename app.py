@@ -11,15 +11,6 @@ with center_column:
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
     
-        body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          margin: 0;
-          background-color: #414141ff;
-         
-        }
     
      
         .logo {
@@ -136,6 +127,9 @@ with center_column:
                 font-family: 'Montserrat', sans-serif;
                 background-color: #414141ff;
                 color: white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
             }
             .stTextInput input {
                 color: white;
