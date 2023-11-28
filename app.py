@@ -105,8 +105,8 @@ with center_column:
       <span class="small hidden">l</span>
       <span class="small hidden">o</span>
       <span class="small hidden">t</span>
-      </div><div style=style='text-align: left'>
-      <img src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg' width='300'>
+      </div><div style='text-align: left'>
+      <img width='300' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
       </div>
     </div>
     
