@@ -8,11 +8,14 @@ html_string = """
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #414141ff; /* Dark background */
-            color: white; /* White text color */
-        }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #414141ff;
+    }
 
         .logo {
             font-family: 'Montserrat', sans-serif;
