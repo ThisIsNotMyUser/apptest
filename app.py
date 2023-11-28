@@ -1,77 +1,43 @@
 import streamlit as st
 
 # Set the page config to widen the app, and set a title and icon
-st.set_page_config(page_title='GenAI Tool', layout='centered')
+st.set_page_config(page_title='SCoP', layout='centered')
+
+# URL of the background image (replace with the actual URL of your image in GitHub)
+bg_image_url = "https://github.com/M-m-mBootz/apptest/blob/main/bg.png"
 
 # Define the custom HTML and CSS to use
-html_string = """
+html_string = f"""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #414141ff; /* Dark background */
+            background-image: url({bg_image_url});
+            background-size: cover;
             color: white; /* White text color */
         }
 
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 4em; /* 2 times larger */
-            text-transform: uppercase;
-            color: white; /* White text color for the logo */
-            cursor: pointer;
-        }
+        /* ... rest of your CSS ... */
 
-        .logo span {
-            display: inline-block;
-        }
-
-        .logo span:hover {
-            animation: distort 0.5s ease-in-out infinite;
-        }
-
-        @keyframes distort {
-            0% {
-                transform: skewX(0deg) skewY(0deg);
-            }
-            25% {
-                transform: skewX(10deg) skewY(10deg);
-            }
-            50% {
-                transform: skewX(-10deg) skewY(-10deg);
-            }
-            75% {
-                transform: skewX(5deg) skewY(5deg);
-            }
-            100% {
-                transform: skewX(0deg) skewY(0deg);
-            }
-        }
-
-        /* Change Streamlit components to the dark theme */
-        .stTextInput .st-bb, .stTextInput .st-eb, .stTextInput .css-1cpxqw2 {
-            background-color: #414141ff;
+        /* Custom CSS to change the placeholder color */
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: white;
-            border-color: white;
+            opacity: 1; /* Firefox */
         }
 
-        /* This targets all Streamlit text */
-        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
-            font-family: 'Montserrat', sans-serif;
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
             color: white;
         }
 
-        /* Override default Streamlit styling for other elements */
-        .st-bv, .st-bw, .st-bx, .stButton>button {
-            background-color: #414141ff;
+        ::-ms-input-placeholder { /* Microsoft Edge */
             color: white;
-            border-color: white;
         }
     </style>
 
     <div class="logo">
-        <span>G</span><span>e</span><span>n</span><span>A</span><span>I</span>
-        <span>T</span><span>o</span><span>o</span><span>l</span>
+        <span>S</span><span>C</span><span>o</span><span>P</span><span>I</span>
+        <span>L</span><span>O</span><span>T</span>
     </div>
 """
 
@@ -84,10 +50,9 @@ st.markdown(
     <style>
         html, body, [class*="st-"], .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
             font-family: 'Montserrat', sans-serif;
-            background-color: #414141ff;
             color: white;
         }
-        .stTextInput input {
+        .stTextInput input, .stTextInput input::placeholder {
             color: white;
         }
         .stTextInput>div>div>input {
@@ -110,5 +75,6 @@ if user_input:
     st.write("You entered: ", user_input)
 
 # The rest of your genAI tool logic will go here
+
 
 
