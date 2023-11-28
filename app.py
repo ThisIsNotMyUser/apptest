@@ -10,13 +10,15 @@ html_string = """
 
         body {
             font-family: 'Montserrat', sans-serif;
+            background-color: #414141ff; /* Dark background */
+            color: white; /* White text color */
         }
 
         .logo {
             font-family: 'Montserrat', sans-serif;
             font-size: 4em; /* 2 times larger */
             text-transform: uppercase;
-            color: #3498db;
+            color: white; /* White text color for the logo */
             cursor: pointer;
         }
 
@@ -46,9 +48,24 @@ html_string = """
             }
         }
 
-        /* This ensures that all text uses the Montserrat font */
-        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm, .stButton>button {
+        /* Change Streamlit components to the dark theme */
+        .stTextInput .st-bb, .stTextInput .st-eb, .stTextInput .css-1cpxqw2 {
+            background-color: #414141ff;
+            color: white;
+            border-color: white;
+        }
+
+        /* This targets all Streamlit text */
+        .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
             font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        /* Override default Streamlit styling for other elements */
+        .st-bv, .st-bw, .st-bx, .stButton>button {
+            background-color: #414141ff;
+            color: white;
+            border-color: white;
         }
     </style>
 
@@ -65,29 +82,34 @@ st.markdown(html_string, unsafe_allow_html=True)
 st.markdown(
     """
     <style>
-        html, body, [class*="st-"] {
+        html, body, [class*="st-"], .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
             font-family: 'Montserrat', sans-serif;
+            background-color: #414141ff;
+            color: white;
         }
+        .stTextInput input {
+            color: white;
+        }
+        .stTextInput>div>div>input {
+            border-color: white;
+        }
+        .css-1cpxqw2 {
+            border-color: white;
+        }
+        /* Add other Streamlit components you wish to style */
     </style>
     """,
     unsafe_allow_html=True
 )
 
 # Instructions
-st.write("Enter your prompt in the text box below and press the arrow button to see the magic.")
+st.write("Enter your prompt in the text box below and hit enter to see the magic.")
 
-# Text input box with a submit button
-user_input = st.text_input("Prompt", key="prompt_input")
-submit_button = st.button("🔼")
+# Text input box at the bottom
+user_input = st.text_input("Prompt", key="prompt_input", on_change=None)
 
-# You can now use the user_input variable to pass to your genAI tool
-# For example:
-# if submit_button:
-#    response = your_genai_function(user_input)
-#    st.write(response)
-
-# Display something once the user enters a prompt and clicks the submit button
-if submit_button:
+# Display something once the user enters a prompt
+if user_input:
     st.write("You entered: ", user_input)
 
 # The rest of your genAI tool logic will go here
