@@ -7,82 +7,78 @@ st.set_page_config(page_title='SCoP', layout='centered')
 html_string = """
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-        
-        /* Add padding to the bottom of the page to lift the content up */
-        .reportview-container .main .block-container {
-            padding-bottom: 5rem;
-        }
 
-        /* Style the logo and input box container */
-        .bottom-container {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 1rem;
-            background-color: #414141ff;
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #414141ff; /* Dark background */
+            color: #ffffff; /* White text color */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
         }
 
         .logo {
             font-family: 'Montserrat', sans-serif;
-            font-size: 4em; /* 2 times larger */
+            font-size: 2em;
             text-transform: uppercase;
-            color: white;
-            display: flex;
-            justify-content: center;
+            color: #ffffff;
         }
 
+        .logo span.large {
+            font-size: 1.5em; /* Larger size */
+            font-weight: 700;
+        }
+
+        .logo span.small {
+            font-size: 1em; /* Smaller size */
+        }
+
+        /* Streamlit's specific text input styling */
         .stTextInput input {
             font-family: 'Montserrat', sans-serif;
             background-color: #414141ff;
             color: white;
-            border-color: white;
+            border: 1px solid white;
         }
 
-        /* Style focused input box */
+        /* Override default Streamlit styling for focused input */
         .stTextInput input:focus {
-            border-color: white;
-            box-shadow: none;
+            border: 1px solid white;
+            outline: none;
         }
-
-        /* Style the placeholder */
-        .stTextInput input::placeholder {
+        
+        .stButton>button {
+            font-family: 'Montserrat', sans-serif;
             color: white;
-            opacity: 0.5;
-        }
-        
-        /* Adjust the style of the input container */
-        .stTextInput {
-            width: 100%;
-            padding: 0 1rem;
-        }
-        
-        /* Add custom styles for Streamlit components */
-        .css-1cpxqw2 {
+            background-color: #414141ff;
             border-color: white;
         }
     </style>
 
-    <div class="bottom-container">
-        <div class="logo">SCoP</div>
-        <!-- This input box will be moved to Streamlit component area -->
+    <div class="logo">
+        <span class="large">S</span>
+        <span class="large">C</span>
+        <span class="small">O</span>
+        <span class="large">P</span>
     </div>
 """
 
-# Inject custom styles and logo into the Streamlit app
+# Use the HTML string with markdown to create the logo with the hover effect
 st.markdown(html_string, unsafe_allow_html=True)
-
-# Create a placeholder to display the result above the input box
-result_placeholder = st.empty()
 
 # Text input box with placeholder
 user_input = st.text_input("", placeholder="Ask SCoP", key="prompt_input")
 
-# Display the result above the input box
+# Display the result above the text box
 if user_input:
-    result_placeholder.markdown(f"You entered: {user_input}", unsafe_allow_html=True)
+    st.empty()  # This is where you would display the result
+    st.write("You entered: ", user_input)
 
 # The rest of your genAI tool logic will go here
+
 
 
 
