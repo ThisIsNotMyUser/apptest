@@ -17,8 +17,8 @@ with center_column:
           align-items: center;
           height: 100vh;
           margin: 0;
-          background-color: #ffffff;
-          background-image: url("https://drive.google.com/file/d/1U8fZSvR-8pvsSs4AtiknBkZAu0SSVzeR/download")
+          background-color: #414141ff;
+         
         }
     
      
@@ -125,6 +125,13 @@ with center_column:
     st.markdown(
         """
         <style>
+            body {
+                background-image: url("https://drive.google.com/file/d/1U8fZSvR-8pvsSs4AtiknBkZAu0SSVzeR/download")
+                font-family: 'Montserrat', sans-serif;
+                background-color: #414141ff;
+                color: white;
+            }
+            
             html, body, [class*="st-"], .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
                 font-family: 'Montserrat', sans-serif;
                 background-color: #414141ff;
