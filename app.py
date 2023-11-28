@@ -142,8 +142,8 @@ with center_column:
             /* Add other Streamlit components you wish to style */
             .stPlaceholder {
                 font-weight: bold;
-                opacity: 0.5;
-                color: red;
+                opacity: 1;
+                color: white;
             }
             
 
