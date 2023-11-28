@@ -102,7 +102,7 @@ with center_column:
           <span class="large">C</span>
           <span class="small">O</span>
           <span class="large">P</span>
-          </div><div style='text-align: right;'>
+          </div><div style='text-align: right;padding: 0px'>
               <span style='font-size: 0.5em;'><b>BY</b></span><img style='width: 100px;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
           </div>
       </div><div style='text-align: right;'>
@@ -112,7 +112,7 @@ with center_column:
           <span class="small hidden">o</span>
           <span class="small hidden">t</span>
           <span class="large" style='opacity:0;'>A</span>
-          </div><div style='text-align: right;'>
+          </div><div style='text-align: right;padding: 0px''>
               <img style='width: 100px; opacity: 0;' src='https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg'>
           </div>
     </div>
