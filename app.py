@@ -20,6 +20,7 @@ html_string = """
  
     .logo {
       font-family: 'Montserrat', sans-serif;
+      justify-content: center;
       font-size: 2em;
       text-transform: uppercase;
       position: relative;
