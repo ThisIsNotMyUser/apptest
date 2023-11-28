@@ -69,10 +69,20 @@ html_string = """
         }
     </style>
 
-    <div class="logo">
-        <span>S</span><span>C</span><span>o</span><span>P</span><span>I</span>
-        <span>L</span><span>O</span><span>T</span>
-    </div>
+
+
+<div class="logo">
+  <span class="large">S</span>
+  <span class="large">C</span>
+  <span class="small">O</span>
+  <span class="large">P</span>
+  <span class="small hidden">i</span>
+  <span class="small hidden">l</span>
+  <span class="small hidden">o</span>
+  <span class="small hidden">t</span>
+</div>
+
+
 """
 
 # Use the HTML string with markdown to create the logo with the hover effect
