@@ -17,7 +17,7 @@ with center_column:
           align-items: center;
           height: 100vh;
           margin: 0;
-          background-color: #414141ff;
+          background-color: #ffffff
         }
     
      
