@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Set the page config to widen the app, and set a title and icon
-st.set_page_config(page_title='GenAI Tool', layout='centered')
+st.set_page_config(page_title='SCoP', layout='centered')
 
 # Define the custom HTML and CSS to use
 html_string = """
@@ -70,8 +70,8 @@ html_string = """
     </style>
 
     <div class="logo">
-        <span>G</span><span>e</span><span>n</span><span>A</span><span>I</span>
-        <span>T</span><span>o</span><span>o</span><span>l</span>
+        <span>S</span><span>C</span><span>o</span><span>P</span><span>I</span>
+        <span>L</span><span>O</span><span>T</span>
     </div>
 """
 
