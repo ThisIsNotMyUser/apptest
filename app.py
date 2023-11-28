@@ -132,7 +132,7 @@ with center_column:
                 color: white;
             }
             
-            html, body, [class*="st-"], .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
+            html, [class*="st-"], .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
                 font-family: 'Montserrat', sans-serif;
                 background-color: #414141ff;
                 color: white;
