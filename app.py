@@ -67,21 +67,6 @@ html_string = """
             color: white;
             border-color: white;
         }
-
-        /* Placeholder text color */
-        .stTextInput input::placeholder {
-            color: white;
-            opacity: 1; /* Make it fully opaque */
-        }
-
-        .stTextInput input::-webkit-input-placeholder {
-            color: white;
-            opacity: 1;
-        }
-
-        .stTextInput input {
-            color: white;
-        }
     </style>
 
     <div class="logo">
@@ -93,6 +78,30 @@ html_string = """
 # Use the HTML string with markdown to create the logo with the hover effect
 st.markdown(html_string, unsafe_allow_html=True)
 
+# Inject the Montserrat font into the Streamlit app
+st.markdown(
+    """
+    <style>
+        html, body, [class*="st-"], .stTextInput, .st-bb, .st-da, .st-ea, .css-10trblm {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #414141ff;
+            color: white;
+        }
+        .stTextInput input {
+            color: white;
+        }
+        .stTextInput>div>div>input {
+            border-color: white;
+        }
+        .css-1cpxqw2 {
+            border-color: white;
+        }
+        /* Add other Streamlit components you wish to style */
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Text input box at the bottom with placeholder
 user_input = st.text_input("", placeholder="Ask SCoP", key="prompt_input")
 
@@ -101,6 +110,7 @@ if user_input:
     st.write("You entered: ", user_input)
 
 # The rest of your genAI tool logic will go here
+
 
 
 
